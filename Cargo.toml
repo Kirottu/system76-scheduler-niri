@@ -1,0 +1,10 @@
+[package]
+name = "system76-scheduler-niri"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+colog = "1.3.0"
+log = "0.4.27"
+niri-ipc = "25.5.1"
+zbus = "5.9.0"
