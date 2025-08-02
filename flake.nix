@@ -22,7 +22,7 @@
           cargoToml = builtins.fromTOML (builtins.readFile ./Cargo.toml);
           pname = cargoToml.package.name;
           version = cargoToml.package.version;
-          pkg = pkgs.rustPlaform.buildRustPackage {
+          pkg = pkgs.rustPlatform.buildRustPackage {
             inherit pname version;
             src = builtins.path {
               path = lib.sources.cleanSource self;
@@ -59,7 +59,7 @@
         {
           options.services.system76-scheduler-niri = {
             enable = lib.mkEnableOption "Enable system76-scheduler Niri integration";
-            package = lib.mkPackageOption self.packages.${pkgs.system} "system76-scheduler-niri";
+            package = lib.mkPackageOption self.packages.${pkgs.system} "system76-scheduler-niri" { };
           };
 
           config = lib.mkIf cfg.enable {
@@ -79,5 +79,6 @@
             };
           };
         };
+      homeModules.system76-scheduler-niri = self.homeModules.default;
     };
 }
