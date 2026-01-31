@@ -13,7 +13,11 @@ cloned repository.
 A Nix flake is provided that contains the package, and a defined systemd user service
 as a home manager module.
 
-**Note**: system76-scheduler has to be enabled separately with `services.system76-scheduler.enable`.
+### Arch Linux
+
+A community-maintained [AUR package](https://aur.archlinux.org/packages/system76-scheduler-niri-git) is available: `yay -S system76-scheduler-niri-git`
+
+**Note**: system76-scheduler has to be enabled separately
 
 ## Usage
 
