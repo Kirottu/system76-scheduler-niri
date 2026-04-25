@@ -59,7 +59,7 @@
         {
           options.services.system76-scheduler-niri = {
             enable = lib.mkEnableOption "Enable system76-scheduler Niri integration";
-            package = lib.mkPackageOption self.packages.${pkgs.system} "system76-scheduler-niri" { };
+            package = lib.mkPackageOption self.packages.${pkgs.stdenv.hostPlatform.system} "system76-scheduler-niri" { };
           };
 
           config = lib.mkIf cfg.enable {
